@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Mishra | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certificates">Certificates</a></li> <!-- Added Certificates Link -->
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">Toggle Mode</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hi, I'm Rishabh Mishra</h1>
+        <h2 id="dynamic-heading">Web Developer</h2> <!-- Updated for JavaScript -->
+        <p>Crafting clean, modern, and functional web solutions.</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </section>
+
+    <section id="about" class="about-me">
+        <h2>About Me</h2>
+        <p class="about-subtitle">A passionate B.Tech student and web developer with a love for coding and problem-solving.</p>
+        
+        <div class="about-container">
+            <!-- Profile Image -->
+            <div class="about-image">
+                <img src="about_me.jpg" alt="Rishabh Mishra">
+            </div>
+    
+            <!-- About Content -->
+            <div class="about-content">
+                <h3>Hi, I'm Rishabh Mishra</h3>
+                <p>
+                    I'm currently pursuing my <strong>B.Tech degree</strong> and have a strong passion for <strong>web development</strong> and programming. 
+                    I enjoy creating clean, modern, and functional web solutions that solve real-world problems.
+                </p>
+                <p>
+                    My journey into the world of coding began with learning <strong>C</strong> and <strong>C++</strong>, which laid the foundation for my problem-solving skills. 
+                    Over time, I expanded my knowledge to include <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, enabling me to build dynamic and responsive websites.
+                </p>
+                <p>
+                    I'm always eager to learn new technologies and improve my skills. When I'm not coding, you can find me exploring new tools, contributing to open-source projects, or working on personal projects to challenge myself.
+                </p>
+                <div class="about-skills">
+                    <h4>Skills I Work With:</h4>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>C, C++</li>
+                        <li>Responsive Web Design</li>
+                        <li>Problem Solving</li>
+                        <li>Version Control (Git)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've worked on to showcase my skills and creativity.</p>
+        
+        <div class="projects-grid">
+            <!-- Project 1: Amazon Clone -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="amazon_img.avif" alt="Amazon Clone">
+                </div>
+                <div class="project-content">
+                    <h3>Amazon Clone</h3>
+                    <p>A replica of Amazon's homepage using HTML and CSS. This project demonstrates my front-end development skills and attention to detail.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">View Code</a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Project 2: Bank Management System -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="bank_img.avif" alt="Bank Management System">
+                </div>
+                <div class="project-content">
+                    <h3>Bank Management System</h3>
+                    <p>A banking system built using C and C++ (OOPs). This project highlights my problem-solving and object-oriented programming skills.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Rishabhmishra45/Demo/blob/main/Projects/bank_M_System.c%2B%2B" class="project-link">View Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <p>Here are some of the technologies and tools I work with:</p>
+        
+        <div class="skills-grid">
+            <!-- HTML Skill -->
+            <div class="skill-card" data-skill="html">
+                <img src="html_logo.png" alt="HTML Logo" class="skill-logo">
+                <h3>HTML</h3>
+                <p>Proficient in creating structured and semantic web pages.</p>
+            </div>
+    
+            <!-- CSS Skill -->
+            <div class="skill-card" data-skill="css">
+                <img src="css_logo.jpeg" alt="CSS Logo" class="skill-logo">
+                <h3>CSS</h3>
+                <p>Skilled in styling and designing responsive websites.</p>
+            </div>
+    
+            <!-- JavaScript Skill -->
+            <div class="skill-card" data-skill="javascript">
+                <img src="javascript_logo.png" alt="JavaScript Logo" class="skill-logo">
+                <h3>JavaScript</h3>
+                <p>Experienced in building interactive and dynamic web applications.</p>
+            </div>
+    
+            <!-- C Skill -->
+            <div class="skill-card" data-skill="c">
+                <img src="c_logo.png" alt="C Logo" class="skill-logo">
+                <h3>C</h3>
+                <p>Strong foundation in procedural programming and problem-solving.</p>
+            </div>
+    
+            <!-- C++ Skill -->
+            <div class="skill-card" data-skill="cpp">
+                <img src="c++_logo.png" alt="C++ Logo" class="skill-logo">
+                <h3>C++</h3>
+                <p>Proficient in object-oriented programming and data structures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <h2>My Certificates</h2>
+        <p>Here are some of the certificates I've earned to showcase my skills and knowledge.</p>
+        
+        <div class="certificates-grid">
+            <!-- Certificate 1 -->
+            <div class="certificate-card">
+                <img src="certificate1.jpg" alt="Certificate 1">
+                <h3>Web Development Bootcamp</h3>
+                <p>Completed a comprehensive web development course covering HTML, CSS, JavaScript, and more.</p>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="certificate-card">
+                <img src="certificate2.jpg" alt="Certificate 2">
+                <h3>C++ Programming</h3>
+                <p>Earned a certificate for completing an advanced c++ programming course.</p>
+            </div>
+
+            <!-- Certificate 3 -->
+            <div class="certificate-card">
+                <img src="certificate3.jpg" alt="Certificate 3">
+                <h3>Responsive Web Design</h3>
+                <p>Certified in creating responsive and mobile-friendly websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations, opportunities, or just a friendly hello!</p>
+        
+        <!-- Contact Form -->
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Rishabh Mishra. All rights reserved.</p>
+            <ul class="footer-social-links">
+                <li>
+                    <a href="https://github.com/Rishabhmishra45" target="_blank" rel="noopener noreferrer">
+                        <!-- GitHub SVG Logo -->
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.92 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/rishabh-mishra-6b27802ba/" target="_blank" rel="noopener noreferrer">
+                        <!-- LinkedIn SVG Logo -->
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M19 0H5a5 5 0 0 0-5 5v14a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V5a5 5 0 0 0-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:rishabhmishra872660@gmail.com">
+                        <!-- Email SVG Logo -->
+                        <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12
