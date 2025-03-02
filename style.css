@@ -1,10 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+    box-sizing: border-box;
+}
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #ffffff; /* Light background */
+    background-color: #E0E0E0; /* Thoda darker shade of #F0F0F0 */
     color: #333333; /* Dark text */
     transition: background-color 0.3s, color 0.3s;
 }
@@ -76,18 +82,22 @@ nav ul li a:hover {
 .hero {
     text-align: center;
     padding: 150px 20px;
-    background-color: #4a90e2; /* Blue background */
-    color: #ffffff; /* White text */
+    background: linear-gradient(135deg, #4a90e2, #6a11cb); /* Gradient background */
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
 }
 
 .hero h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero p {
@@ -110,6 +120,28 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* About Me Section */
 .about-me {
     padding: 80px 20px;
@@ -127,6 +159,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     color: #666666; /* Gray text */
     margin-bottom: 40px;
+    font-family: 'Merriweather', serif; /* Modern font */
 }
 
 .about-container {
@@ -148,6 +181,12 @@ nav ul li a:hover {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .about-content {
@@ -198,7 +237,7 @@ nav ul li a:hover {
 /* Projects Section */
 .projects {
     padding: 80px 20px;
-    background-color: #f9f9f9; /* Light gray background */
+    background-color: #ffffff; /* White background */
     text-align: center;
 }
 
@@ -228,17 +267,38 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: rotate(3deg) scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    position: relative;
 }
 
 .project-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image::after {
+    opacity: 1;
 }
 
 .project-content {
@@ -312,6 +372,7 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .skill-card:hover {
@@ -336,10 +397,30 @@ nav ul li a:hover {
     color: #666666; /* Gray text */
 }
 
+.skill-progress {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background-color: #4a90e2;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.skill-card:hover .skill-progress-bar {
+    width: 100%;
+}
+
 /* Certificates Section */
 .certificates {
     padding: 80px 20px;
-    background-color: #f9f9f9; /* Light gray background */
+    background-color: #ffffff; /* White background */
     text-align: center;
 }
 
@@ -370,10 +451,11 @@ nav ul li a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .certificate-card:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -381,17 +463,12 @@ nav ul li a:hover {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.certificate-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333333; /* Dark text */
-}
-
-.certificate-card p {
-    font-size: 1rem;
-    color: #666666; /* Gray text */
+.certificate-card img:hover {
+    transform: scale(1.1);
 }
 
 /* Contact Section */
@@ -399,24 +476,29 @@ nav ul li a:hover {
     padding: 80px 20px;
     background-color: #ffffff; /* White background */
     text-align: center;
+    background-image: url('contact-bg.jpg'); /* Add a background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333333; /* Dark text */
-}
-
-.contact p {
-    font-size: 1.1rem;
-    color: #666666; /* Gray text */
-    margin-bottom: 40px;
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
 }
 
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
+    position: relative;
+    z-index: 2;
 }
 
 .form-group {
@@ -437,6 +519,7 @@ nav ul li a:hover {
     font-size: 1rem;
     border: 1px solid #cccccc; /* Light gray border */
     border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .submit-button {
@@ -452,6 +535,13 @@ nav ul li a:hover {
 
 .submit-button:hover {
     background-color: #357abd; /* Darker blue hover */
+}
+
+.success-message {
+    display: none;
+    color: #4a90e2;
+    font-size: 1.2rem;
+    margin-top: 20px;
 }
 
 /* Footer Section */
@@ -486,11 +576,12 @@ nav ul li a:hover {
     text-decoration: none;
     color: #ffffff; /* White text */
     font-size: 1.1rem;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-social-links a:hover {
     color: #ffcc00; /* Yellow hover effect */
+    transform: translateY(-5px);
 }
 
 .footer .social-icon {
