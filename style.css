@@ -1,16 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins',sans-serif;
-    box-sizing: border-box;
-}
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #E0E0E0; /* Thoda darker shade of #F0F0F0 */
+    background-color: #E0E0E0; /* Background color */
     color: #333333; /* Dark text */
     transition: background-color 0.3s, color 0.3s;
 }
@@ -593,4 +587,89 @@ nav ul li a:hover {
 
 .footer-social-links a:hover .social-icon {
     fill: #ffcc00; /* Yellow hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Header */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* About Me Section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certificates Section */
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Section */
+    .contact-form {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    /* About Me Section */
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer p {
+        font-size: 0.9rem;
+    }
 }
