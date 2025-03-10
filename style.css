@@ -24,9 +24,64 @@ body.dark-mode {
     color: #f5f5f5; /* Light text */
 }
 
+.dark-mode .about-me, .dark-mode .projects, .dark-mode .skills, .dark-mode .certificates, .dark-mode .contact {
+    background-color: #2c2c2c; /* Dark section background */
+    color: #f5f5f5; /* Light text */
+}
+
+.dark-mode .about-me h2, .dark-mode .projects h2, .dark-mode .skills h2, .dark-mode .certificates h2, .dark-mode .contact h2 {
+    color: #f5f5f5; /* Light text */
+}
+
+.dark-mode .about-subtitle, .dark-mode .projects p, .dark-mode .skills p, .dark-mode .certificates p {
+    color: #cccccc; /* Light gray text */
+}
+
+.dark-mode .about-content h3, .dark-mode .project-content h3, .dark-mode .skill-card h3, .dark-mode .certificate-card h3 {
+    color: #f5f5f5; /* Light text */
+}
+
+.dark-mode .about-content p, .dark-mode .project-content p, .dark-mode .skill-card p, .dark-mode .certificate-card p {
+    color: #cccccc; /* Light gray text */
+}
+
+.dark-mode .about-skills li, .dark-mode .skill-card, .dark-mode .certificate-card {
+    background-color: #333333; /* Dark background */
+    color: #f5f5f5; /* Light text */
+}
+
+.dark-mode .project-link {
+    color: #4a90e2; /* Blue link color */
+    border-color: #4a90e2;
+}
+
+.dark-mode .project-link:hover {
+    background-color: #4a90e2; /* Blue background */
+    color: #ffffff; /* White text */
+}
+
+.dark-mode .contact-form input, .dark-mode .contact-form textarea {
+    background-color: #333333; /* Dark background */
+    color: #f5f5f5; /* Light text */
+    border-color: #555555; /* Darker border */
+}
+
+.dark-mode .contact-form label {
+    color: #f5f5f5; /* Light text */
+}
+
+.dark-mode .submit-button {
+    background-color: #4a90e2; /* Blue button */
+    color: #ffffff; /* White text */
+}
+
+.dark-mode .submit-button:hover {
+    background-color: #357abd; /* Darker blue hover */
+}
+
 /* Header and Navigation */
 header {
-    background-color: #ff6f61; /* Vibrant header color */
+    background-color: black; /* Vibrant header color */
     padding: 15px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: sticky;
@@ -470,12 +525,13 @@ nav ul li a:hover {
     padding: 80px 20px;
     background-color: #ffffff; /* White background */
     text-align: center;
-    background-image: url('contact-bg.jpg'); /* Add a background image */
+    background-image: url('https://via.placeholder.com/1200x800'); /* Placeholder background image */
     background-size: cover;
     background-position: center;
     position: relative;
 }
 
+/* Overlay for better readability */
 .contact::before {
     content: '';
     position: absolute;
@@ -483,16 +539,59 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.9); /* White overlay with 90% opacity */
     z-index: 1;
 }
 
+/* Contact Form Styling */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
     text-align: left;
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure form is above the overlay */
+}
+
+/* Form Group Styling */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333; /* Dark text for better contrast */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Submit Button Styling */
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.contact-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 .form-group {
@@ -505,7 +604,6 @@ nav ul li a:hover {
     margin-bottom: 5px;
     color: #333333; /* Dark text */
 }
-
 .form-group input,
 .form-group textarea {
     width: 100%;
